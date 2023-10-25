@@ -1,7 +1,7 @@
 import { type AtomicNebulaInterface, createNebula, DependencyInjectionMiddleware } from '@atomicdesign/atomic-singularity'
 import { container } from 'tsyringe';
 
-export const TSyringeWrapper: AtomicNebulaInterface = createNebula({
+export const useTSyringe: AtomicNebulaInterface = createNebula({
   name: "atomic-singularity-tsyringe-wrapper"
 })
   .addPreactivation(() => {
