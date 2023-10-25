@@ -9,7 +9,8 @@
     "email": "brandon.m.erb@gmail.com"
   },
   "dependencies": {
-    "@atomicdesign/atomic-singularity": "1.0.0"
+    "@atomicdesign/atomic-singularity": "1.0.0",
+    "tsyringe": "^4.8.0"
   },
   "scripts": {
     "prebuild": "rimraf ./dist",
