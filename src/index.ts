@@ -1,5 +1,9 @@
-import { type AtomicModuleInterface, createModule } from '@atomicdesign/atomic-singularity'
+import { type AtomicNebulaInterface, createNebula } from '@atomicdesign/atomic-singularity'
 
-export const TSyringeWrapper: AtomicModuleInterface = createModule({
+export const TSyringeWrapper: AtomicNebulaInterface = createNebula({
   name: "atomic-singularity-tsyringe-wrapper"
 })
+  .addPreactivation(() => {
+    // Wrap
+  })
+  .build();
