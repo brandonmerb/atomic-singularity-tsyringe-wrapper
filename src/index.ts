@@ -7,11 +7,10 @@ export const useTSyringe = createNebula({
   name: "atomic-singularity-tsyringe-wrapper"
 })
   .addPreactivation(() => {
-    DependencyInjectionMiddleware.instance.setProviderFunction((provider: any, token: DIToken, type: DIProviderTypes, config: any) => {
+    DependencyInjectionMiddleware.instance.setProviderFunction((provider: any, token?: DIToken, type?: DIProviderTypes, config?: any) => {
       // container.register(token as any, provider, config);
       const tokenToUse = token ?? provider;
       if (type) {
-        console.log(type);
         switch (type) {
           case 'class':
             container.register(tokenToUse, {useClass: provider});
